@@ -63,6 +63,10 @@ app.get('/', function(req,res){
 
 //Route Begins Register, Login
 app.use('/api/users', require('./routes/userRoutes'))
+
+//Route Begins Register, newEvent
+app.use('/api/event', require('./routes/neweventRoutes'))
+
 //error handling middleware
 app.use(errorHandler);
 app.listen(PORT, function(){
