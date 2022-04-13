@@ -4,17 +4,25 @@ const neweventSchema = mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
         required: [true, "Please provide an Email"],
-        unique: true
+        unique: false
     },
     designation: {
         type: String,
-        required: [true, "Please provide an Email"],
-        enum: ['web developer','designer']
+        required: [true, "Please provide the designation"],
+        enum: ['web developer','Designer','App developer']
     },
     description: {
         type: String,
         required: [true, "Please Enter the description of the Job Recruitment"]
     },
+    // date: {
+    //     type: Date,
+    //     required: [true, "Please Enter the date of the Job Recruitment"]
+    // },
+    // experience: {
+    //     type: Number,
+    //     required: [true, "Please Enter the Minimum experience required"]
+    // },
     status:{
         type: String,
         required: true,
